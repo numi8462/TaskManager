@@ -1,0 +1,17 @@
+{
+  "name": "TaskManager",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/numi8462/TaskManager.git",
+  "author": "numi8462 <yhk8462@naver.com>",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^8.2.2",
+    "mongoose": "^8.5.1"
+  },
+  "scripts": {
+    "client": "yarn --cwd client dev",
+    "server": " nodemon server/server.js",
+    "dev": "concurrently \"yarn server\" \"yarn client\""
+  }
+}

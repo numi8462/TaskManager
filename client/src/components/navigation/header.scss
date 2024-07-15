@@ -1,0 +1,29 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #255c53;
+    align-items: center;
+    height: 60px;
+    padding: 0 20px;
+    color: white;
+
+    &_logo {
+        display: flex;
+        align-items: center;
+    }
+
+    &_image {
+        width: 50px;
+        padding: 0 5px;
+    };
+
+    &_buttons {
+        button {
+            margin-left: 10px;
+            padding: 10px;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+        }
+    }
+}
