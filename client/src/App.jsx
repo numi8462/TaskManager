@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Header from './components/navigation/header'
+import Signup from './components/registration/Signup'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -8,7 +9,8 @@ function App() {
   return (
     <>
       <div>
-        <Header></Header>
+        <Header/>
+        <Signup/>
       </div>
     </>
   )
