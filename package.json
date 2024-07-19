@@ -6,7 +6,10 @@
   "author": "numi8462 <yhk8462@naver.com>",
   "license": "MIT",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "concurrently": "^8.2.2",
+    "email-validator": "^2.0.4",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.5.1"
   },
   "scripts": {

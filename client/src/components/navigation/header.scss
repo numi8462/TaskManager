@@ -5,11 +5,14 @@
     align-items: center;
     height: 60px;
     padding: 0 20px;
-    color: white;
 
     &_logo {
         display: flex;
         align-items: center;
+
+        h1 {
+            color: white;
+        }
     }
 
     &_image {

@@ -1,30 +1,70 @@
 import './registration.scss'
+import React, { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { register } from '../../redux/authSlice';
 
 const Singup = () => {
+
+    const dispatch = useDispatch();
+
+    const [state, setState] = useState({
+        email:'',
+        password:'',
+        username:'',
+    });
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // updates state
+        dispatch(
+            register({
+                username: state.username,
+                password: state.password,
+                email: state.email,
+            })
+        )
+    };
+
+    const handleChange = (e) => {
+        setState({
+            ...state,
+            [e.target.name]: e.target.value,
+        })
+    };
 
     return ( 
         <>
             <div className="signup-form">
                 <div className="signup-form_wrapper">
-                    <form action="">
+                    <form action="" className='form' onSubmit={handleSubmit}>
+                        <h1 className='register'>Register</h1>
+                        <br />
                         <div className="form-group">
                             <input 
                                 type="text" 
-                                placeholder="Enter Name"
+                                placeholder="이름"
+                                name='username'
+                                value={state.username}
+                                onChange={handleChange}
                             />
                             <input 
                                 type="email" 
-                                name="Enter Email" 
+                                name="email" 
                                 id="" 
-                                placeholder="Enter email"
+                                placeholder="이메일"
+                                value={state.email}
+                                onChange={handleChange}
                             />
                             <input 
-                                type="passowrd" 
-                                name="Enter password" 
+                                type="password" 
+                                name="password" 
                                 id="" 
-                                placeholder="Enter password"
+                                placeholder="비밀번호"
+                                value={state.password}
+                                onChange={handleChange}
                             />
-                            <button>Sign In</button>
+                            <button className='button'>가입하기</button>
+                            <p>이미 계정이 있나요? 로그인 하기</p>
                         </div>
                     </form>
                     
