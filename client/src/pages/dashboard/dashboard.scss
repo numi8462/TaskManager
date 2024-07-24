@@ -1,0 +1,36 @@
+@import '../../styles/abstract/mixins';
+
+.dashboard {
+    width: 100%;
+    height: calc(100vh - 60px);
+    display: flex;
+    background-color: #3AAFA9;
+
+    &__left {
+        width: 15%;
+    }
+    &__right {
+        width: 85%;
+
+        &__content {
+            width: 100%;
+            @include flex-center(flex,column,center,center);
+            margin-top: 2rem;
+        }
+    }
+
+    .box {
+        width: 150px;
+        height: 150px;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        @include flex-center(flex,row,center,center);
+        margin: 1rem 1rem;
+    }
+
+    .taskcount {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+}

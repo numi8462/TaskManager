@@ -5,6 +5,7 @@ import Signup from './components/registration/Signup';
 import Signin from './components/registration/Signin';
 import Home from './pages/home/Home';
 import Dashboard from './pages/dashboard/dashboard';
+import TaskManager from './pages/taskmanagement/TaskManager';
 import './App.css'
 
 import {store} from './redux/store';
@@ -23,6 +24,7 @@ function App() {
             <Route path='/signin' element={<Signin/>}/>
             <Route path='/signup' element={<Signup/>}/>
             <Route path='/dashboard' element={<Dashboard/>}/>
+            <Route path='/taskmanager' element={<TaskManager/>}/>
           </Routes>
         </Router>
 
