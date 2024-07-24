@@ -6,14 +6,19 @@ const validator = require('email-validator');
 const signin = async (req, res) => {
 	let { email, password } = req.body;
 	try {
+		// first find matching email from db
 		let user = await User.findOne({ email });
 		console.log(user, req.body);
 		if (!user) {
+			//return 400 if no matching email
 			return res.status(400).send('email does not exist');
 		}
 
+		// compare password with matching email
 		user.comparePassword(password, (err, match) => {
+			// if password does not match return 400
 			if (!match || err) return res.status(400).send('password does not match');
+			// save authentication token for 24hrs
 			let token = jwt.sign({ _id: user._id }, 'kljclsadflkdsjfklsdjfklsdjf', {
 				expiresIn: '24h',
 			});

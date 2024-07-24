@@ -2,6 +2,7 @@ import './registration.scss'
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { register } from '../../redux/authSlice';
+import { Link } from 'react-router-dom'
 
 const Singup = () => {
 
@@ -64,7 +65,8 @@ const Singup = () => {
                                 onChange={handleChange}
                             />
                             <button className='button'>가입하기</button>
-                            <p>이미 계정이 있나요? 로그인 하기</p>
+                            <p>이미 계정이 있나요? <Link to='/signin'>로그인</Link> 하기</p>
+                            
                         </div>
                     </form>
                     

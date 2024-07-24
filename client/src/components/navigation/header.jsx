@@ -10,7 +10,7 @@ const Header = () => {
     const dispatch = useDispatch();
     const { auth } = useSelector((state) => ({...state}));
 
-    const handleLogout = () => {
+    const handleLogout = (e) => {
         e.preventDefault();
 		dispatch(logoutSuccess());
 		localStorage.removeItem('auth');
@@ -21,22 +21,27 @@ const Header = () => {
     return (
         <>
             <nav className="header">
-                <div className="header_logo">
-                    <img className='header_image' src={Logo} alt="Logo" />
+
+                <div className="header_logo" >
+                    <Link to='/'>
+                        <img className='header_image' src={Logo} alt="Logo" />
+                    </Link>
                     <h1>Task Manager</h1>
                 </div>
+
                 <div className="header_buttons">
                     {auth.currentUser && auth.currentUser.token ? (
                             <Link to='/signin' className='' onClick={handleLogout}>
-                                <button>로그아웃</button>
+                                <button className='logout_button'>로그아웃</button>
                             </Link>
                         ) : (
                             <>
                                 <Link to='/signin' className=''>
-                                    로그인
+                                    <button className='login_button'>로그인</button>
                                 </Link>
+
                                 <Link to='/signup' className=''>
-                                    가입하기
+                                    <button className='signup_button'>가입하기</button>
                                 </Link>
                             </>
                         )}

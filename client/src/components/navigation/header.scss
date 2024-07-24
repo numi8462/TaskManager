@@ -16,6 +16,7 @@
     }
 
     &_image {
+        margin-top: 5px;
         width: 50px;
         padding: 0 5px;
     };
@@ -28,5 +29,19 @@
             outline: none;
             border-radius: 10px;
         }
+
+
     }
+}
+
+.signup_button:hover {
+    background-color: #cccccc;
+}
+
+.login_button:hover {
+    background-color: #cccccc;
+}
+
+.logout_button:hover {
+    background-color: #cccccc;
 }

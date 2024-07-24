@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom'
 
 const Home = () => {
-    const { auth } = useSelector((state) => ({...state}));
+    const { auth } = useSelector((state) => ({ ...state }));
     const { currentUser } = auth;
     return (
         <>
@@ -15,7 +15,7 @@ const Home = () => {
                     <p>With TaskManager</p>
 
                     { currentUser && currentUser.token ? (
-                        <Link to='/dashborad'>
+                        <Link to='/dashboard'>
                             <button className="start-button"><h2>시작하기</h2></button>
                         </Link>
                     ) : (

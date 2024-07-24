@@ -83,17 +83,20 @@ export const signin = (user) => async (dispatch) => {
 			email: user.email,
 			password: user.password,
 		};
+		// receive response from server using authRoutes
+		// authRoutes will use controller for getting response
 		const response = await axios.post(
 			'http://localhost:4000/auth/signin',
 			userData
 		);
+		// if signin set auth token
 		if (response) {
 			localStorage.setItem('auth', JSON.stringify(response.data));
+			// set state
 			dispatch(loginSuccess(response.data));
-
+			// push url to dashboard
 			history.push('/dashboard');
 			toast.success('login successfull');
-
 			window.location.reload();
 		} else {
 			dispatch(loginFailure());

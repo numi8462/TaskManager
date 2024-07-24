@@ -21,6 +21,7 @@ const Signin = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
+        // use dispatch to login
 		dispatch(
 			signin({
 				email: state.email,
@@ -54,7 +55,7 @@ const Signin = () => {
                                 onChange={handleChange}
                             />
                             <button className='button'>로그인</button>
-                            <Link to='/signup'><p>새로 가입하기</p></Link>
+                            <p>처음 오셨나요? <Link to='/signup'>새로 가입하기</Link></p>
                             <p>비밀번호를 잊으셨나요? 비밀번호찾기</p>
                         </div>
                     </form>

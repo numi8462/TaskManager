@@ -12,8 +12,6 @@ app.use(express.json());
 app.use('/auth', authRoutes);
 // app.use('/task', taskRouter);
 
-// localhost:4000/auth/register
-
 const port = 4000;
 
 app.listen(port, () => {
