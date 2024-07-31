@@ -1,0 +1,42 @@
+.sidebar {
+    width: 100%;
+    height: 100%;
+    background-color: #17252a;
+    color: #ffffff;
+    padding: 10px 10px;
+    // width: 15vh;
+
+    .list-item {
+        display: flex;
+        align-items: center;
+        background-color: transparent; /* Ensure the icon and div don't change background */
+        pointer-events: none; /* Disable hover effect */
+    }
+
+    &__link {
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 10px 10px;
+        margin: 10px 0px;
+        border-radius: 10px;
+    }
+
+    &__icon {
+        width: 20px;
+        margin-right: 1rem;
+    }
+
+    &_list :hover {
+        background-color: rgba(128, 128, 128, 0.322);
+    }
+}
+
+li {
+    list-style: none;
+    text-decoration: none;
+
+}

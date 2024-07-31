@@ -40,7 +40,7 @@ const signin = async (req, res) => {
 // controller form register
 const register = async (req, res) => {
 	console.log(req.body, 'req');
-	const { username, password, email } = req.body;
+	const { username, password, email, photoURL } = req.body;
 	try {
 		if (!username) return res.status(400).send('username is required');
 
@@ -62,6 +62,7 @@ const register = async (req, res) => {
 			email,
 			username,
 			password,
+			photoURL,
 		});
 
 		await user.save();

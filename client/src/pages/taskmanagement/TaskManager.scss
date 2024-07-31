@@ -1,0 +1,26 @@
+@import '../../styles/abstract/mixins'; 
+
+.taskmanager {
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-color: #3AAFA9;
+    @include flex-center(flex,row,center,none);
+
+    &__left {
+        width: 15%;
+    }
+
+    &__right {
+        width: 85%;
+        padding: 2rem;
+        @include flex-center(flex,column,none,center);
+    }
+    &__addtask {
+        width: 100%;
+    }
+    &__tasklist {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}

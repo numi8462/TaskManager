@@ -7,11 +7,12 @@ const TaskManager = () => {
     return ( 
         <>
             <div className="taskmanager">
-                <h1>Task Manager Page</h1>
                 <div className="taskmanager__left">
                     <Sidebar />
                 </div>
                 <div className="taskmanager__right">
+                    <h1>TODO</h1>
+
                     <div className="taskmanager__addtask">
                         <AddTask />
                     </div>

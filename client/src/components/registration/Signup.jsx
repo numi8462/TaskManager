@@ -12,6 +12,7 @@ const Singup = () => {
         email:'',
         password:'',
         username:'',
+        photoURL:''
     });
 
     const handleSubmit = (e) => {
@@ -22,6 +23,7 @@ const Singup = () => {
                 username: state.username,
                 password: state.password,
                 email: state.email,
+                photoURL: state.photoURL,
             })
         )
     };

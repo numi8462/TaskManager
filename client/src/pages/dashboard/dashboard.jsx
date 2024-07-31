@@ -11,7 +11,7 @@ const Dashboard = () => {
             </div>
             <div className="dashboard__right">
                 <div className="dashboard__right__content">
-                    <h2>Task Dashboard</h2>
+                    <h1>하루일정표</h1>
                     <div className="taskcount">
                         <div className="todo box">todo</div>
                         <div className="doing box">doing</div>
@@ -19,7 +19,7 @@ const Dashboard = () => {
                     </div>
                     <div className="createButton">
                         <Link to='/taskmanager'>
-                            <button className="create-button">Create Task</button>
+                            <button className="create-button">새로 만들기</button>
                         </Link>
                     </div>
                 </div>

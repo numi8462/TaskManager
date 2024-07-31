@@ -5,5 +5,5 @@ import taskReducer from './taskSlice';
 
 // store authentication key to the local database
 export const store = configureStore({
-    reducer: {auth: authReducer}
+    reducer: {auth: authReducer, task: taskReducer}
 })

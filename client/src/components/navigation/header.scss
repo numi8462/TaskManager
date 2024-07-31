@@ -1,15 +1,13 @@
 .header {
     display: flex;
-    justify-content: space-between;
     background-color: #17252a;
     align-items: center;
     height: 60px;
-    padding: 0 20px;
 
     &_logo {
         display: flex;
         align-items: center;
-
+        justify-content: center;
         h1 {
             color: white;
         }
@@ -22,26 +20,64 @@
     };
 
     &_buttons {
-        button {
-            margin-left: 10px;
-            padding: 10px;
-            border: none;
-            outline: none;
-            border-radius: 10px;
+        position: absolute;
+        right: 20px;
+        .default {
+            display: flex;
+            text-decoration: none;
+            .login_button {
+                padding: 10px;
+                border: none;
+                outline: none;
+                border-radius: 10px;
+                background-color: white;
+
+                .login {
+                    text-decoration: none;
+                    color: #17252a;
+                }
+            }
+            .signup_button {
+                margin-right: 20px;
+                padding: 10px;
+                border: none;
+                outline: none;
+                border-radius: 10px;
+                background-color: white;
+            }
+            .login_button:hover {
+                background-color: #cccccc;
+            }
+            .signup_button:hover {
+                background-color: #cccccc;
+            }
+
         }
 
 
+        .profile {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            
+            &_image {
+                margin-left: 10px;
+                width: 40px;
+            }
+
+            h3 {
+                display: flex;
+            }
+        }
     }
 }
 
-.signup_button:hover {
-    background-color: #cccccc;
+.profile_image {
+    border-radius: 100px;
+    padding: 5px;
 }
 
-.login_button:hover {
-    background-color: #cccccc;
-}
-
-.logout_button:hover {
-    background-color: #cccccc;
+.profile_image:hover {
+    background-color: #e2e2e265;
 }

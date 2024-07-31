@@ -6,7 +6,7 @@ const taskSchema = mongoose.Schema(
 		status: {
 			type: String,
 			enum: ['backlog', 'todo', 'doing', 'done'],
-			default: 'backlog',
+			default: 'todo',
 		},
 		cretedBy: {
 			type: mongoose.Schema.Types.ObjectId,

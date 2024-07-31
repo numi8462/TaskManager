@@ -86,6 +86,8 @@ export const getAllTasks = (token, id) => async (dispatch) => {
 		);
 
 		if (response) {
+			console.log("task data:");
+			console.log(response.data);
 			dispatch(getAllTaskSuccess(response.data));
 		}
 	} catch (error) {
@@ -95,7 +97,7 @@ export const getAllTasks = (token, id) => async (dispatch) => {
 	}
 };
 
-export const arrowClick = (item, string) => async () => {
+export const checkboxClick = (item, string) => async () => {
 	let taskData = {
 		id: item._id,
 		status: item.status,
@@ -128,3 +130,23 @@ export const deleteItem = (id) => async (dispatch) => {
 		dispatch(deletefail());
 	}
 };
+
+export const editItem = (item, string) => async () => {
+	let taskData = {
+		id: item._id,
+		task: item.task,
+		string,
+	}
+	try {
+		let response = await axios.put(
+			`http://localhost:4000/task/edit/${taskData.id}`,
+			taskData
+		);
+
+		if (response) {
+			window.location.reload();
+		}
+	} catch (error) {
+		console.log(error);
+	}
+}
