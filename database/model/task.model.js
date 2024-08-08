@@ -8,7 +8,7 @@ const taskSchema = mongoose.Schema(
 			enum: ['backlog', 'todo', 'doing', 'done'],
 			default: 'todo',
 		},
-		cretedBy: {
+		createdBy: {
 			type: mongoose.Schema.Types.ObjectId,
 			ref: 'User',
 		},

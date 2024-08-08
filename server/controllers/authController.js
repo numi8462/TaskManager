@@ -28,6 +28,7 @@ const signin = async (req, res) => {
 				username: user.username,
 				email: user.email,
 				id: user._id,
+				photo: user.photo,
 				createdAt: user.createdAt,
 				updatedAt: user.updatedAt,
 			});
@@ -62,7 +63,7 @@ const register = async (req, res) => {
 			email,
 			username,
 			password,
-			photoURL,
+			photo,
 		});
 
 		await user.save();
@@ -72,7 +73,31 @@ const register = async (req, res) => {
 	}
 };
 
+const uploadProfilePic = async (req, res) => {
+	console.log("File:");
+	console.log(req.file);
+    try {
+        if (!req.file) {
+            return res.status(400).send('No file uploaded');
+        }
+
+        let user = await User.findById(req.params.userId);
+		console.log(user);
+        if (!user) {
+            return res.status(404).send('User not found');
+        }
+
+        user.photo = req.file.filename;
+        user.save();
+		return res.send(user);
+    } catch (error) {
+        console.log(error);
+        res.status(500).send('Error uploading profile picture');
+    }
+};
+
 module.exports = {
 	signin,
 	register,
+	uploadProfilePic,
 };

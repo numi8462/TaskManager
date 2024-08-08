@@ -1,0 +1,54 @@
+@import '../../../styles/abstract/mixins';
+
+.current-weather {
+    width: 380px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: white;
+    background-color: #17252a;
+    // backdrop-filter: blur(10px); /* This applies the blur effect */
+    margin-top: 20px;
+    padding: 20px;
+
+    .top {
+        @include flex-center(flex,row,space-between,center);
+
+        &__info {
+            @include flex-center(flex,column,center,end);
+
+        }
+
+        .city {
+            font-weight: 400;
+            font-size: 16px;
+        }
+
+        .description {
+            font-size: 24px;
+        }
+
+        .temp {
+            font-weight: 200;
+            font-size: 70px;
+        }
+
+        .weather-icon {
+            width: 150px;
+        }
+
+    }
+
+    .bottom {
+        @include flex-center(flex,row,end,center);
+
+        .details {
+            width: 30%;
+            padding-top: 10px;
+            font-size: 12px;
+
+            .parameter-row {
+                @include flex-center(flex,row,space-between,none)
+            }
+        }
+    }
+}

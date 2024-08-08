@@ -8,7 +8,6 @@ const TaskManager = () => {
         <>
             <div className="taskmanager">
                 <div className="taskmanager__left">
-                    <Sidebar />
                 </div>
                 <div className="taskmanager__right">
                     <h1>TODO</h1>

@@ -6,14 +6,13 @@ import Signin from './components/registration/Signin';
 import Home from './pages/home/Home';
 import Dashboard from './pages/dashboard/dashboard';
 import TaskManager from './pages/taskmanagement/TaskManager';
+import Calendar from './pages/calendar/Calendar';
+import Settings from './pages/settings/Settings';
+import DragDropTask from './pages/dragdropTask/dragdropTask';
 import './App.css'
-
-import {store} from './redux/store';
-import { Provider } from 'react-redux';
 
 function App() {
   const [count, setCount] = useState(0)
-
   return (
     <>
       <div>
@@ -25,6 +24,9 @@ function App() {
             <Route path='/signup' element={<Signup/>}/>
             <Route path='/dashboard' element={<Dashboard/>}/>
             <Route path='/taskmanager' element={<TaskManager/>}/>
+            <Route path='/calendar' element={<Calendar/>}/>
+            <Route path='/settings' element={<Settings/>}/>
+            <Route path='/dragdroptask' element={<DragDropTask/>}/>
           </Routes>
         </Router>
 

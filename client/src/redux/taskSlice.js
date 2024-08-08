@@ -37,6 +37,12 @@ export const taskSlice = createSlice({
 		deletefail: (state) => {
 			return state;
 		},
+		deleteAllSuccess: (state, action) => {
+            state.AllTasks = action.payload;
+        },
+        deleteAllFail: (state) => {
+            return state;
+        },
 	},
 });
 
@@ -48,6 +54,8 @@ export const {
 	deleteSuccess,
 	deletefail,
 	editTaskSuccess,
+	deleteAllFail,
+	deleteAllSuccess,
 } = taskSlice.actions;
 
 export default taskSlice.reducer;
@@ -124,6 +132,19 @@ export const deleteItem = (id) => async (dispatch) => {
 	if (res) {
 		dispatch(deleteSuccess());
 		toast.success('task deleted successfully');
+
+		window.location.reload();
+	} else {
+		dispatch(deletefail());
+	}
+};
+
+export const deleteAllItems = (createdBy) => async (dispatch) => {
+	let res = await axios.delete(`http://localhost:4000/task/deleteAll/${createdBy}`);
+
+	if (res) {
+		dispatch(deleteSuccess());
+		toast.success('All tasks deleted successfully');
 
 		window.location.reload();
 	} else {

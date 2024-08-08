@@ -22,13 +22,13 @@ const DropDownProfile = () => {
     return ( 
         <div className="dropdownprofile">
             <ul className='dropdown_list'>                    
-                <Link to='/signin' className=''>
+                <Link to='/settings' className=''>
                     <li>
                         <img src={ProfileIcon} alt="" className='dropdownprofile__icon__profile'/>
                         프로필
                     </li>
                 </Link>
-                <Link to='/signin' className=''>
+                <Link to='/settings' className=''>
                     <li>
                         <img src={SettingIcon} alt="" className='dropdownprofile__icon__setting'/>
                         설정

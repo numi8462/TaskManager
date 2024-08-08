@@ -1,0 +1,38 @@
+@import '../../styles/abstract/mixins';
+
+.forecast {
+    &_list {
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        color: rgb(255, 255, 255);
+        background-color: #17252a;
+        padding: 10px;
+        margin-top: 100px;
+        @include flex-center(flex,row,center,center);
+
+    }
+
+    .daily_item {
+        width: 100px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 15px;
+        margin: 10px;
+        @include flex-center(flex,column,center,center);
+
+        .day {
+            font-weight: 200;
+            font-size: 20px;
+            padding-bottom: 20px;
+        }
+
+        .weather-icon {
+            width: 50px;
+        }
+
+        .temp {
+            font-weight: 400;
+            font-size: 25px;
+        }
+    }
+}

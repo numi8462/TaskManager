@@ -8,7 +8,7 @@ const addTask = async (req, res) => {
 		// if (task.length < 10) res.status(400).send('add minimum 10 char');
 		const taskDetail = await new Task({
 			task,
-			cretedBy: id,
+			createdBy: id,
 		});
 		await taskDetail.save();
 		return res.status(200).send(taskDetail);
@@ -20,7 +20,7 @@ const addTask = async (req, res) => {
 const getAllTasks = async (req, res) => {
 	const { id } = req.query;
 	try {
-		let tasklist = await Task.find({ cretedBy: id });
+		let tasklist = await Task.find({ createdBy: id });
 		return res.status(200).send(tasklist);
 	} catch (error) {
 		return res.status(400).send(error);
@@ -97,10 +97,22 @@ const deleteTask = async (req, res) => {
 	}
 };
 
+const deleteAllTask = async (req, res) => {
+	const { createdBy } = req.params;
+	try {
+		let response = await Task.deleteMany({ createdBy });
+		return res.status(200).send(response);
+	} catch (error) {
+		return res.status(400).send('deleteAllFailed');
+	}
+};
+
+
 module.exports = {
 	addTask,
 	getAllTasks,
 	editTask,
 	statusChange,
 	deleteTask,
+	deleteAllTask,
 };
