@@ -27,19 +27,15 @@ const Header = () => {
     };
     // Check if user has photo, if not set it to SVG file
     useEffect(() => {
-        if (!auth.currentUser.photo) {
+        if (auth.currentUser) {
+          if (!auth.currentUser.photo) {
             setProfileImage(ProfileImg);
-        } else {
+          } else {
             setProfileImage(`./images/${auth.currentUser.photo}`);
+          }
+        } else {
+          setProfileImage(ProfileImg); // Set a default image if currentUser is null
         }
-
-        // Attach the listeners on component mount
-        document.addEventListener('mousedown', handleClickOutside);
-
-        // Detach the listeners on component unmount
-        return () => {
-            document.removeEventListener('mousedown', handleClickOutside);
-        };
     }, [auth.currentUser]);
 
     return (
@@ -61,7 +57,6 @@ const Header = () => {
                 <div className="header_buttons">
                     {auth.currentUser && auth.currentUser.token ? (
                         <div className="profile" onClick={() => setOpenProfile((prev) => (!prev))}>
-                            <h3>{auth.currentUser.username}</h3>
                             <img src={profileImage} alt="profile" className="profile_image" />
                         </div>
                     ) : (

@@ -45,7 +45,7 @@
             display: flex;
             text-decoration: none;
             .login_button {
-                padding: 10px;
+                padding: 5px 10px;
                 border: none;
                 outline: none;
                 border-radius: 10px;
@@ -76,27 +76,19 @@
 
 
         .profile {
-            width: 120px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
             padding: 3px 0px;
             border-radius: 25px;
-            margin: 0px 10px;
+            margin: 0px 15px;
 
             &_image {
                 width: 35px;
+                border-radius: 50%;
             }
 
             h3 {
                 display: flex;
                 margin-right: 10px;
             }
-        }
-
-        .profile:hover {
-            background-color: #e2e2e24b;
         }
     }
 }

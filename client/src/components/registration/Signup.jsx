@@ -4,26 +4,31 @@ import { useDispatch } from 'react-redux';
 import { register } from '../../redux/authSlice';
 import { Link } from 'react-router-dom'
 
-const Singup = () => {
+const Signup = () => {
 
     const dispatch = useDispatch();
 
     const [state, setState] = useState({
         email:'',
         password:'',
+        confirmPassword:'',
         username:'',
-        photoURL:''
+        photo:''
     });
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        if (state.password !== state.confirmPassword) {
+            alert("비밀번호가 틀립니다!");
+            return;
+        }
         // updates state
         dispatch(
             register({
                 username: state.username,
                 password: state.password,
                 email: state.email,
-                photoURL: state.photoURL,
+                photo: state.photo,
             })
         )
     };
@@ -66,6 +71,15 @@ const Singup = () => {
                                 value={state.password}
                                 onChange={handleChange}
                             />
+                            <input 
+                                type="password" 
+                                name="confirmPassword" 
+                                id="" 
+                                placeholder="비밀번호 확인"
+                                value={state.confirmPassword}
+                                onChange={handleChange}
+                            />
+                            
                             <button className='button'>가입하기</button>
                             <p>이미 계정이 있나요? <Link to='/signin'>로그인</Link> 하기</p>
                             
@@ -78,4 +92,4 @@ const Singup = () => {
     );
 }
  
-export default Singup;
+export default Signup;

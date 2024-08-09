@@ -27,7 +27,11 @@ const Signin = () => {
 				email: state.email,
 				password: state.password,
 			})
-		);
+		).then(response => {
+			if (!response.success) {
+				alert("Incorrect password!");
+			}
+        });
 	};
 
     return ( 

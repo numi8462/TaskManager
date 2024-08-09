@@ -6,11 +6,50 @@
     align-items: center;
     padding: 20px;
 
+    .edit-profile {
+        width: 200px;
+        display: flex;
+        position: absolute;
+        top: 167px;
+        background-color: rgba(255, 255, 255, 0);
+        border: none;
+        cursor: pointer;
+
+        .edit-icon {
+            width: 100%;
+            height: 200px;
+            padding: 70px;
+            visibility: hidden;
+            color: #e9ecef91;
+            border-radius: 50%;
+
+        }
+
+        &:hover .edit-icon{
+            background-color: #e9ecef5d;
+            visibility: visible;
+          }
+    }
+
     form {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: start;
+
+        .profile {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile_image {
+            width: 200px;
+            margin-top: 20px;
+            border-radius: 50%;
+        }
 
         .label {
             padding: 5px 0px;
@@ -18,29 +57,9 @@
             font-size: 16px;
         }
 
-        .input_field {
-            width: 400px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            border-radius: 4px;
-            border: 1px solid #ced4da;
-            background-color: #f8f9fa;
-            color: black;
-            margin-bottom: 10px;
-        }
 
         .custom-file-upload {
-            display: inline-block;
-            padding: 6px 12px;
-            cursor: pointer;
-            background-color: #f8f9fa;
-            border-right: 1px solid #ced4da;
-            color: #495057;
-            margin-right: 10px;
-            &:hover {
-              background-color: #e9ecef;
-            }
+
         }
 
         .button_field {

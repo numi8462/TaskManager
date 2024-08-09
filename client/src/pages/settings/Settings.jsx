@@ -12,7 +12,6 @@ const Settings = () => {
             </div>
             <div className="settings__right">
                 <div className="settings__right__content">
-                    <h1>설정</h1>
                     <ProfilePicUpload/>
 
                 </div>
