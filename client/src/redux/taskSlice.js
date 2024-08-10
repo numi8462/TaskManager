@@ -2,6 +2,8 @@ import { createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
+const URL = `https://taskmanager-backend-5nsx.onrender.com`;
+
 const initalTask = localStorage.getItem('task')
 	? JSON.parse(localStorage.getItem('task'))
 	: null;
@@ -65,7 +67,7 @@ export const addTask = (task, id) => async (dispatch) => {
 		task,
 		id,
 	};
-	const response = await axios.post('http://localhost:4000/task/add', taskData);
+	const response = await axios.post(`${URL}/task/add`, taskData);
 	if (response) {
 		localStorage.setItem('task', JSON.stringify(response.data));
 
@@ -89,7 +91,7 @@ export const getAllTasks = (token, id) => async (dispatch) => {
 
 	try {
 		const response = await axios.get(
-			'http://localhost:4000/task/tasks',
+			`${URL}/task/tasks`,
 			config
 		);
 
@@ -114,7 +116,7 @@ export const checkboxClick = (item, string) => async () => {
 
 	try {
 		let response = await axios.put(
-			`http://localhost:4000/task/${taskData.id}`,
+			`${URL}/task/${taskData.id}`,
 			taskData
 		);
 
@@ -127,7 +129,7 @@ export const checkboxClick = (item, string) => async () => {
 };
 
 export const deleteItem = (id) => async (dispatch) => {
-	let res = await axios.delete(`http://localhost:4000/task/${id}`);
+	let res = await axios.delete(`${URL}/task/${id}`);
 
 	if (res) {
 		dispatch(deleteSuccess());
@@ -140,7 +142,7 @@ export const deleteItem = (id) => async (dispatch) => {
 };
 
 export const deleteAllItems = (createdBy) => async (dispatch) => {
-	let res = await axios.delete(`http://localhost:4000/task/deleteAll/${createdBy}`);
+	let res = await axios.delete(`${URL}/task/deleteAll/${createdBy}`);
 
 	if (res) {
 		dispatch(deleteSuccess());
@@ -160,7 +162,7 @@ export const editItem = (item, string) => async () => {
 	}
 	try {
 		let response = await axios.put(
-			`http://localhost:4000/task/edit/${taskData.id}`,
+			`${URL}/task/edit/${taskData.id}`,
 			taskData
 		);
 
