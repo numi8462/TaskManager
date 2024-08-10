@@ -4,5 +4,9 @@ import reactSvgPlugin from 'vite-plugin-svgr';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(),reactSvgPlugin(),],
+  plugins: [react(), reactSvgPlugin()],
+  base: '/',
+  build: {
+    outDir: 'dist',
+  },
 })
