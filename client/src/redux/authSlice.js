@@ -4,6 +4,8 @@ import history from '../history';
 import { toast } from 'react-toastify';
 
 // controls the application's authentication
+const URL = `https://taskmanager-backend-5nsx.onrender.com`;
+
 const initialUser = localStorage.getItem('auth')
 	? JSON.parse(localStorage.getItem('auth'))
 	: null;
@@ -56,7 +58,7 @@ export const register = (user) => async (dispatch) => {
 		};
 
 		const response = await axios.post(
-			'http://localhost:4000/auth/register',
+			`${URL}/auth/register`,
 			user,
 			config
 		);
@@ -85,7 +87,7 @@ export const signin = (user) => async (dispatch) => {
 		// receive response from server using authRoutes
 		// authRoutes will use controller for getting response
 		const response = await axios.post(
-			'http://localhost:4000/auth/signin',
+			`${URL}/auth/signin`,
 			userData
 		);
 		// if signin set auth token
@@ -122,7 +124,7 @@ export const uploadProfilePic = (userId, imageFile) => async (dispatch) => {
         };
 
         const response = await axios.post(
-            `http://localhost:4000/auth/uploadProfilePic/${userId}`,
+            `${URL}/auth/uploadProfilePic/${userId}`,
             formData,
             config
         );
