@@ -10,7 +10,8 @@
     "concurrently": "^8.2.2",
     "email-validator": "^2.0.4",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.5.1"
+    "mongoose": "^8.5.1",
+    "TaskManager": "file:"
   },
   "scripts": {
     "client": "yarn --cwd client dev",
