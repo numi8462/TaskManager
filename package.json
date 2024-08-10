@@ -16,6 +16,7 @@
   "scripts": {
     "client": "yarn --cwd client dev",
     "server": " nodemon server/server.js",
-    "dev": "concurrently \"yarn server\" \"yarn client\""
+    "dev": "concurrently \"yarn server\" \"yarn client\"",
+    "install-all": "npm install && cd server && npm install"
   }
 }
