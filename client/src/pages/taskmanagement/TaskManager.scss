@@ -15,13 +15,30 @@
         padding: 2rem;
         @include flex-center(flex,column,none,center);
     }
+
     &__addtask {
         width: 100%;
         @include flex-center(flex,column,none,center);
     }
+
     &__tasklist {
         width: 100%;
         display: flex;
         justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .taskmanager {
+        width: 100%;
+        height: calc(100vh - 130px);
+        background-color: #3AAFA9;
+        @include flex-center(flex,row,center,none);
+
+        &__right {
+            width: 100%;
+            padding: 1rem;
+            @include flex-center(flex,column,none,center);
+        }
     }
 }

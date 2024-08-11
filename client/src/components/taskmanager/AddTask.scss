@@ -53,3 +53,61 @@
     }
 
 }
+
+@media only screen and (max-width: 600px) {
+    .addtask {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        form {
+            width: 100%;
+            margin: 1rem 0rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        input {
+            width: 25rem;
+            height: 3rem;
+            border: none;
+            outline: none;
+            background-color: whitesmoke;
+            border-radius: 5px;
+        }
+    
+        .add_button {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 10rem;
+            height: 3rem;
+            margin: 0rem 1rem;
+            border-radius: 10px;
+            border: none;
+            background-color: #17252a;
+            color: white;
+            cursor: pointer;
+            content: 'asd';
+        }
+        .deleteAll_button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 12rem;
+            height: 3rem;
+            border-radius: 10px;
+            border: none;
+            background-color: #EC5D67;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+        }
+    
+    }
+}

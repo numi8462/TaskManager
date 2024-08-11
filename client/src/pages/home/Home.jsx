@@ -11,7 +11,7 @@ const Home = () => {
         <>
             <div className='home'>
                 <div className="home__container">
-                    <h1>쉽게 하루 일정 정리하기</h1>
+                    <h1 className=''>쉽게 하루 일정 정리하기</h1>
                     <p>TaskManager와 함께라면~</p>
 
                     { currentUser && currentUser.token ? (

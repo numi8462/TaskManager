@@ -12,3 +12,9 @@
         display: none; /* Hide the taskList when the window width is 600px or less */
     }
 }
+
+@media only screen and (max-width: 600px) { /* Adjust the max-width value as needed */
+    .taskList {
+        display: flex;
+    }
+}

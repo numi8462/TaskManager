@@ -10,6 +10,10 @@ const ListCard = ({ item, isEditing, setEditingItemId }) => {
     const [editedTask, setEditedTask] = useState(item.task);
     const inputRef = React.useRef(null);
 
+    const handleFocus = (event) => {
+        event.target.blur();
+    };
+
     useEffect(() => {
         if (isEditing && inputRef.current) {
             inputRef.current.focus();
@@ -47,6 +51,7 @@ const ListCard = ({ item, isEditing, setEditingItemId }) => {
                                 onChange={(e) => setEditedTask(e.target.value)}
                                 className='edit_form'
                                 ref={inputRef}
+                                onFocus={handleFocus}
                             />
                         </div>
                     ) : (

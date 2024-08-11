@@ -19,3 +19,23 @@
         }
     }
 }
+
+@media only screen and (max-width: 600px){
+    .home {
+        width: 100%;
+        height: calc(100vh - 130px);
+        background-size: cover;
+        background-color: #3AAFA9;
+        @include flex-center(flex, row, center, center);
+    
+        &__container {
+            color: #17252a;
+            width: 100%;
+            @include flex-center(flex, column, center, center);
+    
+            h1{
+                font-size: 30px;
+            }
+        }
+    }
+}

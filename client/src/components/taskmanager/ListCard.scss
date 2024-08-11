@@ -69,3 +69,78 @@
     }
     
 }
+
+
+@media only screen and (max-width: 600px) {
+    .listcard {
+        width: 390px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+    }
+    
+    .menu {
+        display: flex;
+        align-items: center;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
+        margin: 10px 0;
+        border-radius: 25px;
+        padding: 0rem 1rem;
+        background-color: #17252a;
+        color: white;
+        width: 90%;
+        justify-content: space-between;
+    
+        .menu_list {
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+    
+        .task_done {
+            color: rgb(49, 165, 107);
+            text-decoration: line-through;
+        }
+    
+        .actions {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-size: 25px;
+            cursor: pointer;
+    
+            .icon__save,
+            .icon__checkbox,
+            .icon__edit,
+            .icon__delete {
+                display: flex;
+                align-items: center;
+                padding: 5px;
+                border-radius: 10px;
+            }
+    
+            .icon__save:hover,
+            .icon__checkbox:hover,
+            .icon__edit:hover,
+            .icon__delete:hover {
+                background-color: rgba(128, 128, 128, 0.493);
+            }
+            
+            .icon__checkbox {
+                margin-right: 10px;
+            }
+        }
+    
+        .edit_form {
+            background-color: transparent; 
+            border: none; 
+            outline: none;
+            color: white; 
+            font-size: 16px; 
+            padding: 5px;
+        }
+        
+    }
+}
