@@ -18,7 +18,7 @@ npm run install-all
 yarn dev
 ```
 
-**Preview of Application**
+## Preview of Application
 
 ![TaskManager](client/src/images/task3.png)
 
