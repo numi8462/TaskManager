@@ -19,8 +19,8 @@ yarn dev
 ```
 
 **Preview of Application**
-![Task Manager](client/src/images/task3)
+![TaskManager](client/src/images/task3)
 
-![Task Manager](client/src/images/task2)
+![TaskManager](client/src/images/task2)
 
-![Task Manager](client/src/images/task1)
+![TaskManager](client/src/images/task1)
