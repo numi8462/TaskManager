@@ -1,5 +1,6 @@
 # Task Manager App
-This is a basic todo App. Using MERN.
+This is a basic todo App. Using MERN with Login/Signup.
++ Simple Weather App
 
 ## Guide on Installation
 **For Frontend**
@@ -16,3 +17,10 @@ npm run install-all
 ```
 yarn dev
 ```
+
+**Preview of Application**
+![Task Manager](client/src/images/task3)
+
+![Task Manager](client/src/images/task2)
+
+![Task Manager](client/src/images/task1)
