@@ -60,7 +60,7 @@ const Signin = () => {
                             />
                             <button className='button'>로그인</button>
                             <p>처음 오셨나요? <Link to='/signup'>새로 가입하기</Link></p>
-                            <p>비밀번호를 잊으셨나요? 비밀번호찾기</p>
+                            <p>로그인 하는데 조금 걸릴수있어요!</p>
                         </div>
                     </form>
                     

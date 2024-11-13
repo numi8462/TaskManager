@@ -82,7 +82,10 @@ const Signup = () => {
                             
                             <button className='button'>가입하기</button>
                             <p>이미 계정이 있나요? <Link to='/signin'>로그인</Link> 하기</p>
-                            
+                            <br />
+                            <p>회원가입이 귀찮으시다면 테스트용 계정을 쓰세요! </p>
+                            <p>아이디: sample@gmail.com</p>
+                            <p>비번: sample123</p>
                         </div>
                     </form>
                     

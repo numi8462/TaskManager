@@ -3,19 +3,19 @@
 
 .signup-form {
     width: 100%;
-    height: calc(100vh - 60px);
+    margin-top: 50px;
     @include flex-center(flex,row,Center,Center);
     background-color: #3AAFA9;
 
     &_wrapper {
-        width: 25%;
+        width: 30%;
         height: 600px;
 
         .form {
             width: 100%;
-            height: 520px;
+            height: 620px;
             padding: 3rem 1rem;
-            @include flex-center(flex,column,none,center);
+            @include flex-center(flex,column,center,center);
             background-color: white;
             border-radius: 15px;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -44,20 +44,71 @@
 
 }
 
+@media only screen and (max-width: 1280px) {
+    .signup-form {
+        width: 100%;
+        height: 100vh;
+        @include flex-center(flex,column,center,center);
+        background-color: #3AAFA9;
+    
+        &_wrapper {
+            width: 400px;
+            height: 100vh;
+            margin-top: 20px;
+    
+            .form {
+                width: 100%;
+                height: 650px;
+                padding: 3rem 1rem;
+                @include flex-center(flex,column,none,center);
+                background-color: white;
+                border-radius: 15px;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+                .register {
+                    margin-top: 2rem;
+                    // margin-bottom: 2rem;
+                    color: #17252a;
+                }
+    
+                .form-group{
+                    @include flex-center(flex,column,center,center);
+        
+                    padding: 10px;
+        
+                    input {
+                        padding: 1rem 1.5rem;
+                        margin-bottom: 1rem;
+                    }
+
+                    .button {
+                        width: 200px;
+                    }
+    
+                }
+            }
+    
+    
+        }
+    
+    }
+}
+
 @media only screen and (max-width: 600px) {
     .signup-form {
         width: 100%;
-        height: calc(100vh - 130px);
+        height: 100vh;
         @include flex-center(flex,column,center,center);
         background-color: #3AAFA9;
     
         &_wrapper {
             width: 80%;
+            height: 100vh;
             margin-top: 20px;
     
             .form {
                 width: 100%;
-                height: 550px;
+                height: 650px;
                 padding: 3rem 1rem;
                 @include flex-center(flex,column,none,center);
                 background-color: white;

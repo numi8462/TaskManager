@@ -3,6 +3,8 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  background-color: #3AAFA9;
+
 }
 
 button {
@@ -11,4 +13,8 @@ button {
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
+}
+
+main {
+  background-color: #3AAFA9;
 }
